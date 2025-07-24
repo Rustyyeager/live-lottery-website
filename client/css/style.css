@@ -1,0 +1,26 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #f2f2f2;
+}
+
+#spinner-container {
+  position: relative;
+  display: inline-block;
+}
+
+#wheel {
+  border-radius: 50%;
+  border: 8px solid #333;
+}
+
+#pointer {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  font-size: 30px;
+  color: red;
+}

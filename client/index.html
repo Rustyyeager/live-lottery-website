@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Lottery Spinner</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Live Lottery Spinner</h1>
+  <div id="spinner-container">
+    <canvas id="wheel" width="400" height="400"></canvas>
+    <div id="pointer">▲</div>
+  </div>
+
+  <div id="game-info">
+    <p>Select a number (1–6) and pay ₹10 to join</p>
+    <select id="number-choice">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <button id="pay-button">Pay ₹10 & Join</button>
+  </div>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="js/spinner.js"></script>
+</body>
+</html>
