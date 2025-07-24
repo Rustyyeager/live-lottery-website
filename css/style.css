@@ -1,26 +1,86 @@
-
+/* Updated CSS for colorful dark theme with animations */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 30px;
-  background-color: #f2f2f2;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-in;
 }
 
-#spinner-container {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner-container {
   position: relative;
-  display: inline-block;
-}
-
-#wheel {
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  border: 8px solid #333;
+  background: conic-gradient(
+    #f44336 0deg 60deg,
+    #e91e63 60deg 120deg,
+    #9c27b0 120deg 180deg,
+    #2196f3 180deg 240deg,
+    #4caf50 240deg 300deg,
+    #ffc107 300deg 360deg
+  );
+  border: 8px solid #fff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
-#pointer {
+.pointer {
   position: absolute;
-  top: -25px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%) rotate(180deg);
-  font-size: 30px;
-  color: red;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid #fff;
+  filter: drop-shadow(0 0 6px #fff);
+}
+
+button {
+  padding: 10px 20px;
+  background: #00c6ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 30px;
+}
+
+button:hover {
+  background: #0072ff;
+  transform: scale(1.05);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #ffeb3b;
+  text-shadow: 0 0 10px #ffeb3b;
+  margin-bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
 }
